@@ -1,14 +1,28 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
+}
 
-sourceCompatibility = 1.5
-version = '1.0'
+group 'tech.maslick.camt053'
+version '1.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "javax.xml.bind:jaxb-api:2.3.1"
+    implementation "com.sun.xml.bind:jaxb-core:2.3.0.1"
+    implementation "com.sun.xml.bind:jaxb-impl:2.3.2"
 }
 
-
+jar {
+    manifest {
+        attributes 'Main-Class': 'tech.maslick.camt053.HelloworldKt'
+    }
+    from {
+        configurations.runtimeClasspath.filter{ it.exists() }.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    archiveFileName = "camt053-${project.version}.jar"
+}
