@@ -1,5 +1,5 @@
 # camt.053
-create and parse camt053 xml files
+create and parse camt.053 xml files
 
 
 ## Usage
