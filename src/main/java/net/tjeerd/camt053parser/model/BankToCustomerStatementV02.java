@@ -101,4 +101,7 @@ public class BankToCustomerStatementV02 {
         return this.stmt;
     }
 
+    public void setStmt(List<AccountStatement2> stmt) {
+        this.stmt = stmt;
+    }
 }
