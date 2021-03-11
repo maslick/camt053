@@ -1,4 +1,5 @@
-# camt053 creator
+# camt053
+create and parse camt053 xml files
 
 
 ## Usage
