@@ -1,4 +1,4 @@
-# camt053
+# camt.053
 create and parse camt053 xml files
 
 
